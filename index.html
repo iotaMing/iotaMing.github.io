@@ -76,8 +76,8 @@
       <div class='cover-body'>
   <div class='a'>
     
-      <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png'/>
     
+      <p class="title">iotaMing</p>
     
     
   </div>
@@ -396,16 +396,16 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("docs" == "none") { // 移除封面
+  if ("blog" == "none") { // 移除封面
     document.getElementsByClassName('cover')[0].style.display = "none";
     document.getElementsByClassName('l_body')[0].classList.add("nocover");
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("docs" == "blog") { // 半屏
+    if ("blog" == "blog") { // 半屏
       document.getElementsByClassName('cover')[0].classList.remove("full");
       document.getElementsByClassName('cover')[0].classList.add("half");
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("docs" == "docs") { // 全屏
+    } else if ("blog" == "docs") { // 全屏
       document.getElementsByClassName('cover')[0].classList.remove("half");
       document.getElementsByClassName('cover')[0].classList.add("full");
       document.getElementsByClassName('scroll-down')[0].style.display = "";
@@ -855,16 +855,16 @@ adb shell am start -D -n &lt;packages name&gt;/&lt;mainActivity&gt; //配置调�
       
     
       
-        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
-        Use
+        本站使用
         <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
-        as theme, total visits
+        作为主题，总访问量为
           <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-          times
+          次
         
       
     
@@ -888,12 +888,12 @@ adb shell am start -D -n &lt;packages name&gt;/&lt;mainActivity&gt; //配置调�
   <div id="rightmenu-wrapper">
     <ul class="list-v rightmenu" id="rightmenu-content">
       <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick='document.execCommand("copy")'><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick='document.execCommand("copy")'><i class='fa fa-copy fa-fw'></i>复制文本</a>
         <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
         <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
         <hr id='hr-src'>
       </li>
       <li class='navigation'>
