@@ -2465,7 +2465,7 @@ div.gallery.stretch>p img {
 }
 .gt-container a.is--active {
   color: #333;
-  cursor: $default, default !important;
+  cursor: default;
 }
 .gt-container a.is--active:hover {
   color: #333;
@@ -2561,7 +2561,7 @@ div.gallery.stretch>p img {
 .gt-container .gt-avatar-github {
   width: 3em;
   height: 3em;
-  cursor: $pointer, pointer;
+  cursor: pointer;
 }
 @media (max-width: 479px) {
   .gt-container .gt-avatar-github {
@@ -2575,7 +2575,7 @@ div.gallery.stretch>p img {
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
-  cursor: $pointer, pointer;
+  cursor: pointer;
   border: 1px solid #44d7b6;
   border-radius: 5px;
   background-color: #44d7b6;
@@ -2595,7 +2595,7 @@ div.gallery.stretch>p img {
   vertical-align: top;
 }
 .gt-container .gt-btn.is--disable {
-  cursor: $not-allowed, not-allowed;
+  cursor: not-allowed;
   opacity: 0.5;
 }
 .gt-container .gt-btn-login {
@@ -2670,7 +2670,7 @@ div.gallery.stretch>p img {
 }
 .gt-container .gt-user-inner {
   display: inline-block;
-  cursor: $pointer, pointer;
+  cursor: pointer;
 }
 .gt-container .gt-user .gt-ico {
   margin: 0 0 0 0.3125em;
@@ -2702,7 +2702,7 @@ div.gallery.stretch>p img {
   letter-spacing: 0.5px;
 }
 .gt-container .gt-popup .gt-action {
-  cursor: $pointer, pointer;
+  cursor: pointer;
   display: block;
   margin: 0.5em 0;
   padding: 0 1.125em;
@@ -2894,7 +2894,7 @@ div.gallery.stretch>p img {
 .gt-container .gt-comment-like:hover,
 .gt-container .gt-comment-edit:hover,
 .gt-container .gt-comment-reply:hover {
-  cursor: $pointer, pointer;
+  cursor: pointer;
 }
 .gt-container .gt-comment-like {
   top: 0;
@@ -2946,6 +2946,11 @@ div.gallery.stretch>p img {
 }
 .markdown-body blockquote {
   border-left: 0.25em solid #44d7b6 !important;
+  padding: 16.1px 16px 16px !important;
+  transition: all 0.28s ease !important;
+  -moz-transition: all 0.28s ease !important;
+  -webkit-transition: all 0.28s ease !important;
+  -o-transition: all 0.28s ease !important;
 }
 @-moz-keyframes gt-kf-rotate {
   0% {
@@ -3750,9 +3755,10 @@ div.gallery.stretch>p img {
   background: none;
 }
 .article kbd {
-  border-radius: 2px;
-  border: 1px solid #e4e4e4;
-  background: #f6f6f6;
+  border-radius: 4px;
+  border: 1px solid #d2d2d2;
+  border-bottom-width: 2px;
+  background: #fafafa;
   padding-left: 4px;
   padding-right: 4px;
 }
@@ -5112,6 +5118,34 @@ div.hoverbox:hover >div.target {
   margin-bottom: 0.4rem;
   font-size: 0.875rem;
 }
+.comments #load-btns,
+.comments #loading-comments {
+  text-align: center;
+  margin: 16px 0;
+}
+.comments #load-btns,
+.comments #loading-comments,
+.comments #load-btns a,
+.comments #loading-comments a,
+.comments #load-btns i,
+.comments #loading-comments i {
+  line-height: 2.8125rem;
+}
+.comments #load-btns a.load-comments,
+.comments #loading-comments a.load-comments {
+  display: inline-block;
+  border-radius: 2px;
+  cursor: pointer;
+  background: #44d7b6;
+  color: #fff;
+  padding-top: 2px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.comments #load-btns a.load-comments:hover,
+.comments #loading-comments a.load-comments:hover {
+  background: #ff5722;
+}
 .white-box {
   background: #fff;
 }
@@ -5409,7 +5443,7 @@ ul.list-v {
   border-radius: 4px;
   padding: 8px 0;
 }
-ul.list-v >hr {
+ul.list-v hr {
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -5786,6 +5820,7 @@ ul.list-v.rightmenu a {
 ul.list-v.rightmenu a.vlts-menu {
   text-overflow: ellipsis;
   overflow: hidden;
+  line-height: 32px;
 }
 ul.list-v.rightmenu li.navigation,
 ul.list-v.rightmenu li.music {
@@ -5797,16 +5832,16 @@ ul.list-v.rightmenu li.music a.icon-only {
   line-height: 0;
   margin: 0;
   padding: 0;
-  border-radius: 36px;
+  border-radius: 32px;
   overflow: hidden;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
 }
 ul.list-v.rightmenu li.navigation a.nav i,
 ul.list-v.rightmenu li.music a.nav i {
   margin: 0;
-  width: 36px;
-  line-height: 36px;
+  width: 32px;
+  line-height: 32px;
 }
 ul.list-v.rightmenu li.navigation a.nav:first-child,
 ul.list-v.rightmenu li.music a.nav:first-child {
@@ -5844,7 +5879,7 @@ ul.list-v.rightmenu li.music a.nav.volume .aplayer-volume-bar {
   height: 8px;
   width: 100%;
   background: #ededed;
-  border-radius: 36px;
+  border-radius: 32px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.28s ease;
@@ -5857,14 +5892,14 @@ ul.list-v.rightmenu li.music a.nav.volume .aplayer-volume-bar i.right {
   color: #696969;
   position: absolute;
   top: 0;
-  width: 32px;
-  line-height: 32px;
+  width: 28px;
+  line-height: 28px;
   transition: all 0.28s ease;
   -moz-transition: all 0.28s ease;
   -webkit-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   opacity: 0;
-  transform: scale(0.5) translateY(-22px);
+  transform: scale(0.5) translateY(-18px);
 }
 ul.list-v.rightmenu li.music a.nav.volume .aplayer-volume-bar i.left {
   left: 0;
@@ -5873,7 +5908,7 @@ ul.list-v.rightmenu li.music a.nav.volume .aplayer-volume-bar i.right {
   right: 0;
 }
 ul.list-v.rightmenu li.music a.nav.volume .aplayer-volume-bar:hover {
-  height: 32px;
+  height: 28px;
 }
 ul.list-v.rightmenu li.music a.nav.volume .aplayer-volume-bar:hover i {
   opacity: 1;
@@ -6940,4 +6975,27 @@ kbd,
 }
 .fix-cursor-default {
   cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/left_ptr.png"), default !important;
+}
+.gt-container a.is--active {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/left_ptr.png"), default !important;
+}
+.gt-container .gt-avatar-github {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer !important;
+}
+.gt-container .gt-btn {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer !important;
+}
+.gt-container .gt-btn.is--disable {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/circle.png"), not-allowed !important;
+}
+.gt-container .gt-user-inner {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer !important;
+}
+.gt-container .gt-popup .gt-action {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer !important;
+}
+.gt-container .gt-comment-like:hover,
+.gt-container .gt-comment-edit:hover,
+.gt-container .gt-comment-reply:hover {
+  cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer !important;
 }
